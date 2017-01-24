@@ -6,9 +6,9 @@
       case 'pages':
         $controller = new PagesController();
       break;
-      case 'posts':
-        require_once('models/post.php');
-        $controller = new PostsController();
+      case 'books':
+        require_once('models/book.php');
+        $controller = new BooksController();
       break;
     }
 
@@ -16,7 +16,7 @@
   }
 
   $controllers = array('pages' => ['home', 'error'],
-                       'posts' => ['index', 'show']);
+                       'books' => ['index', 'show', 'remove']);
 
   if (array_key_exists($controller, $controllers)) {
     if (in_array($action, $controllers[$controller])) {
