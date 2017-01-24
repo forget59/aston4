@@ -41,11 +41,13 @@
       $req->execute(array('id' => $id));
     }
 
-    public static function add(){
+    public static function add($titre, $pages, $categorie){
       $db = Db::getInstance();
       $id = intval($id);
-      $req = $db->prepare("INSERT INTO `livres` (`id`, `titre`, `pages`, `categorie`) VALUES (NULL, 'toto', '100', 'osef ')");
-      $req->execute(array('id' => $id));
+      $req = $db->prepare("INSERT INTO `livres` (`id`, `titre`, `pages`, `categorie`) VALUES (NULL, '".$titre."', '".$pages."', '".$categorie."')");
+      $req->execute(array("titre'" => $titre
+                          ,"pages" => $pages
+                          ,"categorie" => $categorie));
     }
   }
 ?>
