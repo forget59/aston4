@@ -40,5 +40,12 @@
       $req = $db->prepare('DELETE FROM livres WHERE id = :id');
       $req->execute(array('id' => $id));
     }
+
+    public static function add(){
+      $db = Db::getInstance();
+      $id = intval($id);
+      $req = $db->prepare("INSERT INTO `livres` (`id`, `titre`, `pages`, `categorie`) VALUES (NULL, 'toto', '100', 'osef ')");
+      $req->execute(array('id' => $id));
+    }
   }
 ?>
