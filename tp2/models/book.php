@@ -49,5 +49,11 @@
                           ,"pages" => $pages
                           ,"categorie" => $categorie));
     }
-  }
+
+    public static function update($titre, $pages, $categorie, $id){
+      $db = Db::getInstance();
+      $req = $db->prepare("UPDATE `livres` SET `titre` = '".$titre."', `pages` = '".$pages."', `categorie` = '".$categorie."' WHERE `livres`.`id` = ".$id.";");
+      $req->execute();
+    }
+}
 ?>

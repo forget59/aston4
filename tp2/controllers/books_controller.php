@@ -25,7 +25,15 @@
       if (!empty($_POST['titre'])&&!empty($_POST['pages'])&&!empty($_POST['categorie'])){
         $book = Book::add($_POST['titre'], $_POST['pages'], $_POST['categorie']);
         header('Location: /astonS4/aston4/tp2/?controller=books&action=index');
+      }
     }
-  }
+
+    public function update(){
+      require_once('views/books/update.php');
+      if (!empty($_POST['titre'])||!empty($_POST['pages'])||!empty($_POST['categorie'])){
+        $book = Book::update($_POST['titre'], $_POST['pages'], $_POST['categorie'], $_GET['id']);
+        header('Location: /astonS4/aston4/tp2/?controller=books&action=index');
+      }
+    }
 }
 ?>

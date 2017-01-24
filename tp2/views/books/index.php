@@ -3,6 +3,7 @@
   <p>
     <?php echo $book->author; ?>
     <a href='?controller=books&action=show&id=<?php echo $book->id; ?>'>See content</a>
+    <a href='?controller=books&action=update&id=<?php echo $book->id; ?>'>Update content</a>
     <a href='?controller=books&action=remove&id=<?php echo $book->id; ?>'>Remove content</a>
   </p>
 <?php } ?>

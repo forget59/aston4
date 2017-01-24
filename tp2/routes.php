@@ -16,7 +16,7 @@
   }
 
   $controllers = array('pages' => ['home', 'error'],
-                       'books' => ['index', 'show', 'remove', 'add']);
+                       'books' => ['index', 'show', 'remove', 'add', "update"]);
 
   if (array_key_exists($controller, $controllers)) {
     if (in_array($action, $controllers[$controller])) {
