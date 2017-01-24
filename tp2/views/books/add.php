@@ -1,6 +1,25 @@
 <form action="?controller=books&action=add" method="post">
-  <p>Titre : <input type="text" name="titre" /></p>
-  <p>Pages : <input type="text" name="pages" /></p>
- <p>Categorie : <input type="text" name="categorie" /></p>
- <p><input type="submit" value="OK"></p>
+ <div class="form-group">
+   <label class="control-label col-sm-2" for="titre">Titre:</label>
+   <div class="col-sm-10">
+     <input type="text" class="form-control" id="titre" name="titre" placeholder="Enter Title">
+   </div>
+ </div>
+ <div class="form-group">
+   <label class="control-label col-sm-2" for="pages">Pages:</label>
+   <div class="col-sm-10">
+     <input type="text" class="form-control" id="pages" name="pages" placeholder="Enter password">
+   </div>
+ </div>
+ <div class="form-group">
+    <label class="control-label col-sm-2" for="categorie">Categorie:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="categorie" name="categorie" placeholder="Enter password">
+    </div>
+  </div>
+ <div class="form-group">
+   <div class="col-sm-offset-2 col-sm-10">
+     <button type="submit" class="btn btn-default">Submit</button>
+   </div>
+ </div>
 </form>
